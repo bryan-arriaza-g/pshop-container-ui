@@ -2,7 +2,7 @@
   "env": {
     "browser": true,
     "jest": true,
-    "es2021": true,
+    "es2021": true
   },
   "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended", "airbnb"],
   "overrides": [],
@@ -10,13 +10,20 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "prettier"],
   "rules": {
+    "linebreak-style": 0,
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [
       1,
       {
         "extensions": [".js", ".jsx"]
+      }
+    ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto"
       }
     ]
   }
