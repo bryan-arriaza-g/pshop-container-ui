@@ -16,6 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "test:ui": "echo 'Testing'...",
     "eslint": "eslint src --config .eslintrc --fix",
     "prettier": "prettier src -check",
     "prettier:check": "prettier --config .prettierrc --check src",
