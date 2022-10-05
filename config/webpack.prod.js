@@ -15,7 +15,7 @@ const prodConfig = {
       name: 'container',
       filename: 'containerRemoteEntry.js',
       remotes: {
-        users: 'users@http://localhost:3001/usersRemoteEntry.js',
+        users: 'users@http://localhost:3001/usr/share/nginx/html/usersRemoteEntry.js',
       },
       shared: packageJson.dependencies,
     }),
