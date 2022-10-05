@@ -8,16 +8,15 @@ import './index.scss';
 
 /**
  * App Layout
+ * @param {Component} children children elements
  * @returns {Component} Layout
  */
-const AppLayout = () => (
+const AppLayout = ({ children }) => (
   <Layout className="app-layout">
     <Sidebar />
     <Layout className="site-layout">
       <Header />
-      <Content>
-        <h1>Hi! 👋 PetShop</h1>
-      </Content>
+      <Content>{children}</Content>
       <Footer />
     </Layout>
   </Layout>

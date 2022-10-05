@@ -15,15 +15,16 @@ const devConfig = {
     open: true,
     port: PORT,
     historyApiFallback: {
-      index: 'index.html',
+      index: '/index.html',
     },
     hot: true,
   },
   plugins: [
     new ModuleFederationPlugin({
       name: 'container',
-      filename: 'containerRemoteEntry.js',
-      remotes: {},
+      remotes: {
+        users: 'users@http://localhost:3001/usersRemoteEntry.js',
+      },
       shared: packageJson.dependencies,
     }),
   ],
