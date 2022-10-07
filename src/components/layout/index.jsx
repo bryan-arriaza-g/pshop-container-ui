@@ -11,15 +11,20 @@ import './index.scss';
  * @param {Component} children children elements
  * @returns {Component} Layout
  */
-const AppLayout = ({ children }) => (
-  <Layout className="app-layout">
-    <Sidebar />
-    <Layout className="site-layout">
-      <Header />
-      <Content>{children}</Content>
-      <Footer />
+const AppLayout = ({ isSignedIn, children }) => {
+  if (!isSignedIn) {
+    return children;
+  }
+  return (
+    <Layout className="app-layout">
+      <Sidebar />
+      <Layout className="site-layout">
+        <Header />
+        <Content>{children}</Content>
+        <Footer />
+      </Layout>
     </Layout>
-  </Layout>
-);
+  );
+};
 
 export default AppLayout;

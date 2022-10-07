@@ -16,7 +16,11 @@
     "import/no-unresolved": "off",
     "arrow-parens": "off",
     "object-curly-newline": "off",
+    "react/function-component-definition": "off",
+    "arrow-body-style": "off",
     "react/react-in-jsx-scope": "off",
+    "no-param-reassign": "off",
+    "react/prop-types": "off",
     "react/jsx-filename-extension": [
       1,
       {
@@ -28,9 +32,6 @@
       {
         "endOfLine": "auto"
       }
-    ],
-    // React
-    "react/function-component-definition": ["off"],
-    "react/prop-types": ["error", { "ignore": ["children"] }]
+    ]
   }
 }

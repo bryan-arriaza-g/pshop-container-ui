@@ -24,6 +24,7 @@ const devConfig = {
       name: 'container',
       remotes: {
         users: 'users@http://localhost:3001/usersRemoteEntry.js',
+        auth: 'auth@http://localhost:5000/authRemoteEntry.js',
       },
       shared: packageJson.dependencies,
     }),
