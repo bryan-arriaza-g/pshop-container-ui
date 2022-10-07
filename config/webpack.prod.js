@@ -5,6 +5,7 @@ const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
 const PORT = 3000;
+const DOMAIN_AUTH = 'http://localhost:5000';
 const DOMAIN_USERS = 'http://localhost:3001';
 
 const prodConfig = {
@@ -18,6 +19,7 @@ const prodConfig = {
       name: 'container',
       filename: 'containerRemoteEntry.js',
       remotes: {
+        auth: `auth@${DOMAIN_AUTH}/authRemoteEntry.js`,
         users: `users@${DOMAIN_USERS}/usersRemoteEntry.js`,
       },
       shared: packageJson.dependencies,

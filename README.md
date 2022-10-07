@@ -4,6 +4,8 @@
 `npm run start`
 
 **Note:**
+Running with docker (production) is not able to run mfes isolate (is not recommended)
+So you need to run the mfe docker images but accessing from http://localhost:3000 (container/orchestrator)
 You need to run the **pshop-users-ui** mfe
 
 ### Run with Docker (WIP)
